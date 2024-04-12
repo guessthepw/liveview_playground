@@ -1,5 +1,9 @@
 defmodule LiveviewPlayground.Endpoint do
   use Phoenix.Endpoint, otp_app: :liveview_playground
+
+  plug Plug.Static, from: {:phoenix, "priv/static"}, at: "/assets/phoenix"
+  plug Plug.Static, from: {:phoenix_live_view, "priv/static"}, at: "/assets/phoenix_live_view"
+
   socket "/live", Phoenix.LiveView.Socket
   plug :router
 

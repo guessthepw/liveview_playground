@@ -10,12 +10,8 @@ defmodule LiveviewPlayground.Layout do
     ~H"""
     <script :for={script <- @scripts} src={script}>
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/phoenix@1.7.0-rc.2/priv/static/phoenix.min.js">
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/phoenix_live_view@0.18.2/priv/static/phoenix_live_view.min.js"
-    >
-    </script>
+    <script src="/assets/phoenix/phoenix.js"></script>
+    <script src="/assets/phoenix_live_view/phoenix_live_view.js"></script>
     <script>
       let liveSocket = new window.LiveView.LiveSocket("/live", window.Phoenix.Socket)
       liveSocket.connect()
